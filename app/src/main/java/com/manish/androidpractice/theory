@@ -1,0 +1,56 @@
+#Difference between Var and Val an const
+The val keyword is used to declare a "read-only" variable i.e. an immutable variable.it is not possible to reassign a value to a variable marked with val keyword.
+The var keyword is used to declare mutable variables i.e. variables whose value can be changed and reassigned to it.
+The const keyword is used to declare compile-time constants while the val keyword can declare runtime constants.the const keyword is used to declare variables whose values are known at compile-time only.
+
+
+#How to define lateint and what /how to use
+lateinit means late initialization. If we do not want to initialize a variable in the constructor instead
+if we want to initialize it later on and if we can guarantee the initialization before using it,
+then we should declare that variable with lateinit keyword. It will not allocate memory until initialized.
+
+# What is exhaustive in When, what is difference between switch and When, what is the role of else in When
+Enums are exhaustive in when expressions.An exhaustive when statement contains branches for all possible types or values of its subject
+or for some types plus an else branch. In other words, it covers all possible cases.
+
+In Kotlin, we have no switch statement. Instead, Kotlin replaces the switch with the When expression.
+Just like the ‘default’ case in Java switch, the default statement is ‘else’ in case of when in Kotlin.
+The else is mandatory if you use when as an expression.
+
+#diffrence between object and companion object,when to use companion object and how to create singelton class
+if we want to write a function or any member of the class that can be called without having the instance of the class then we can write
+the same as a member of a companion object inside the class.
+So, by declaring the companion object, you can access the members of the class by class name only.
+
+A singleton class is a class that is defined in such a way that only one instance of the class can be created and used everywhere.
+
+#why to use serialization in kotlin
+Serialization is the process of converting data used by an application to a format that can be transferred over a network or stored in a
+database or a file. In turn, deserialization is the opposite process of reading data from an external source and converting it into a runtime object.
+Together they are an essential part of most applications that exchange data with third parties.
+
+Kotlin serialization is kotlin-first, compile-time, type-safe, reflection-free and completely multi-platform ready serialization mechanism to convert kotlin objects into data formats like JSON or Protobuf and vice-versa.
+It is comprised of a compiler plugin which is used to generate code for serializable classes and a runtime library, containing core classes and primitives for serialization & IO, among some other things.
+
+#Sealed class
+“Sealed” class is a type of class is used to represent a restricted class hierarchy. Sealed allows the developers to maintain a data type of a predefined type.
+To make a sealed class, we need to use the keyword “sealed” as a modifier of that class. A sealed class can have its own subclass but all those subclasses need to be declared inside the same Kotlin file along with the sealed class.
+ In the following example, we will see how to use a sealed class.
+
+#Abstract class
+An abstract class is a class that cannot be instantiated. We create abstract classes to provide a common template for other classes to extend and use.
+
+#infix functions
+Kotlin allows some functions to be called without using the period and brackets. These are called infix methods, and their use can result in code that looks much more like a natural language.
+
+#nested class and inner class
+Nested class is such class which is created inside another class. In Kotlin, nested class is by default static, so its data member and member function can be accessed without creating an object of class.
+ Nested class cannot be able to access the data member of outer class.
+
+ Inner class is a class which is created inside another class with keyword inner.Inner class cannot be declared inside interfaces or non-inner nested classes.
+ The advantage of inner class over nested class is that, it is able to access members of outer class even it is private.
+ Inner class keeps a reference to an object of outer class.
+
+#MutableList
+In Kotlin, mutableListOf() method is used to instantiate MutableList Interface. MutableList class is used to create mutable lists in which the elements can be added or removed. The method mutableListOf()
+ returns an instance of MutableList Interface and takes the array of a particular type or mixed (depends on the type of MutableList instance) elements or it can be null also.
